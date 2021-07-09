@@ -1,3 +1,12 @@
+def obsh(x, y): #  это коммент
+    array = []
+    for i in range(2, min(x, y)+1):
+        if x % i == 0 and y % i == 0:
+            array.append(i)
+    return array
+print(obsh(12, 18))
+
+
 def chet(x): # определяем функцию с входным параметром х
     if x % 2 == 0: # если число кратно 2ум, то возвращаем тру
         return True
@@ -22,18 +31,3 @@ def ost(x): # функция вывода всех остатков числа
         if x % i == 0: # если исходное число поделилось на переборное, то переборное - это делитель
             array.append(i) # теку3щий делитель записываем в список
     return array # возвращаем этот список
-
-
-col = int(input("Сколько чисел вводить? "))
-for i in range(col):
-    num = int(input("ВВедите число "))
-    if chet(num): # if chet(num) == True:
-        print(num, "четное")
-    else:
-        print(num, "нечетное")
-    if simple(num):
-        print(num, "простое")
-    else:
-        print(num, "составное")
-    print(ost(num))
-
